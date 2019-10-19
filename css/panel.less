@@ -1,3 +1,5 @@
+//out: panel.css,compress:true
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 @import url('https://unpkg.com/boxicons@2.0.3/css/boxicons.min.css');
 
@@ -184,6 +186,18 @@ body{
 .wrap h1{
 	font-size: 27px;
 	font-weight: 300;
+}
+
+.postbox .hndle, .stuffbox .hndle{
+	border-bottom: none;
+}
+
+#dashboard-widgets .meta-box-sortables{
+	margin: 0 15px;
+}
+
+.postbox, .stuffbox{
+	margin-bottom: 30px;
 }
 
 .wp-core-ui .button-primary{
@@ -383,4 +397,38 @@ input[type=checkbox]:checked:before{
 
 #menu-management .menu-edit, #menu-settings-column .accordion-container, .comment-ays, .feature-filter, .imgedit-group, .manage-menus, .menu-item-handle, .popular-tags, .stuffbox, .widget-inside, .widget-top, .widgets-holder-wrap, .wp-editor-container, p.popular-tags, table.widefat{
 	.whiteboard;
+}
+
+
+#collapse-menu{
+	#collapse-button{
+		color: #fff;
+		.collapse-button-icon{
+			left: 8px;
+			&::after{
+				top: 5px;
+			}
+		}
+		.collapse-button-label{
+			padding:  0 0 0 44px;
+		}
+	}
+}
+
+@media (min-width: 960px){
+	.auto-fold .edit-post-header {
+		left: 230px;
+	}
+}
+
+@media (min-width: 782px) and (min-width: 960px){
+	body.auto-fold .edit-post-layout__content {
+		margin-left: 230px;
+	}
+}
+
+@media (min-width: 768px){
+	.editor-styles-wrapper .editor-writing-flow {
+		margin: 0 5% !important;
+	}
 }

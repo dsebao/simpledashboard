@@ -41,3 +41,31 @@ function load_custom_wp_admin_style() {
 
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
+function login_style() {
+    wp_enqueue_style( 'custom_wp_admin_css',plugin_dir_url( __FILE__ ) . '/css/login.css');
+}
+add_action( 'login_enqueue_scripts', 'login_style' );
+
+/**
+ * Register a custom menu page.
+ */
+function register_skeda_custom_menu_page() {
+    add_menu_page(__( 'View Site', 'skeda-business' ),
+        __('View Site','skeda-business'),
+        'amelia_read_calendar',
+        get_bloginfo('url'),
+        '',
+        "dashicons-admin-site-alt3",
+        1
+    );
+    add_menu_page(__( 'Log out', 'skeda-business' ),
+        __('Log Out','skeda-business'),
+        'amelia_read_calendar',
+        wp_logout_url(),
+        '',
+        "dashicons-redo",
+        140
+    );
+}
+add_action( 'admin_menu', 'register_skeda_custom_menu_page' );
+
