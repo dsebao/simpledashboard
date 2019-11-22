@@ -49,10 +49,10 @@ add_action( 'login_enqueue_scripts', 'login_style' );
 /**
  * Register a custom menu page.
  */
-function register_skeda_custom_menu_page() {
+function register_simpledash_custom_menu_page() {
     add_menu_page(__( 'View Site', 'skeda-business' ),
         __('View Site','skeda-business'),
-        'amelia_read_calendar',
+        'read',
         get_bloginfo('url'),
         '',
         "dashicons-admin-site-alt3",
@@ -60,12 +60,12 @@ function register_skeda_custom_menu_page() {
     );
     add_menu_page(__( 'Log out', 'skeda-business' ),
         __('Log Out','skeda-business'),
-        'amelia_read_calendar',
+        'read',
         wp_logout_url(),
         '',
         "dashicons-redo",
         140
     );
 }
-add_action( 'admin_menu', 'register_skeda_custom_menu_page' );
+add_action( 'admin_menu', 'register_simpledash_custom_menu_page' );
 
